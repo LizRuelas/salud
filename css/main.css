@@ -1,36 +1,134 @@
-.dia {
-	text-align: center;
-	display: inline-block;
-	border: 2px solid black;
-	padding: 8px;
-	height: 480px;
-	width: 115px;
-		
-}
-.alimento {
-    width: 93px;
-    height: 70px;
-    padding: 10px;
-    border: 1px solid #aaaaaa;
+* {
+    box-sizing: border-box;
 }
 
-#seccion {
-	
-	width: 20%;
-    height: 450px;
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    font-size: 100%;
+    font-family: 'Helvetica', sans-serif;
+    color: #212121;
+}
+
+header{
+    background-color: #B0C41E;
+    /* width: 100%; /* No es necesario, el display por defecto es block y en consecuencia su width es 100%*/
+    height: 7rem;
+    /* margin: 0px; /* Por defecto es 0 */
+    text-align: left;
+    padding: 0 2rem;
+}
+
+.logo {
+    height: 100%;
+    padding: 0.5rem 0;
+}
+
+.logo img {
+    height: 100%;
+    width: auto;
+}
+
+main {
+    padding: 2rem;
+    background-color: #FAFAFA;
+}
+
+.organizador {
+    width: 72rem;
+    display: block;
+    margin: 0 auto;
+}
+
+.organizador::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#menu-de-frutas {
+    width: 12.5%;
+    float: left;
+}
+
+ul.lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.lista li.alimento {
+    width: 100%;
+    height: 4rem;
+    padding: 0.5rem;
+}
+
+ul.lista li.alimento img {
+    height: 100%;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.horario {
+    width: 87.5%;
+    margin: 0 8rem;
+}
+
+.horario::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.horario .dia {
+    /* display: inline-block; /* Esto hace que al añadir frutas a cada dia se disminuya el tamaño de los '.dia's */
+    float: left; /* Evita que las columnas se muevan */
     text-align: center;
-    display: inline-block;
-    
-}
-#div1 {
-    width: 350px;
-    height: 70px;
-    padding: 10px;
-    border: 1px solid #aaaaaa;
-}
-img {
-	width :: 50px;
-	height :50px;
-	position: static;
+    width: 12.5%;
+    padding: 0.25rem;
 }
 
+.dia .alimento {
+    width: 100%;
+    height: 4rem;
+    padding: 0.5rem;
+    border: 1px solid #aaaaaa;
+}
+
+.dia .alimento img {
+    height: 100%;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.alimento ~ .alimento {
+    margin-top: 0.5rem;
+}
+
+.title {
+    color: #424242;
+    font-size: 1.5rem;
+    line-height: 1.25;
+    text-align: left;
+    margin: 0 0 0.75rem;
+}
+
+.sub-title {
+    font-size: 1rem;
+    line-height: 1.25;
+    text-align: left;
+    margin: 0;
+    font-weight: normal;
+    color: #636363;
+    margin: 0 0 0.5rem;
+}
+
+.center-align {
+    text-align: center;
+}

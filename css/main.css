@@ -35,7 +35,7 @@ header{
 
 main {
     padding: 2rem;
-    background-color: #FAFAFA;
+   
 }
 
 .organizador {
@@ -131,4 +131,12 @@ ul.lista li.alimento img {
 
 .center-align {
     text-align: center;
+}
+#titulo {
+    position: relative;
+    left: 9%;
+    top: -39px;
+    padding-bottom: -25px;
+    font-size: 28px;
+    font-family: "Times New Roman";
 }

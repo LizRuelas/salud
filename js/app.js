@@ -25,15 +25,16 @@
             naranja.addEventListener("dragstart", function(evento) {
                 inicio(evento, this);
             });
-
             mandarina.addEventListener("dragstart", function(evento) {
                 inicio(evento, this);
             });
-
             fresa.addEventListener("dragstart", function(evento) {
                 inicio(evento, this);
             });
+
         } 
+        
+
         function inicio(e) {
             e.dataTransfer.setData("img", e.target.id); 
         }
@@ -49,6 +50,9 @@
         	elementoClonado.addEventListener("dblclick",function(){
         		elementoClonado.style.display = "none";
         	});
+            	elementoClonado.addEventListener("dblclick",function(){
+            		elementoClonado.style.display = "none";
+            	});
         }
     });
 })()
